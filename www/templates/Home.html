@@ -1,0 +1,30 @@
+<ion-content padding="true" class="has-header"> 
+	<div class="main-img">
+		<div class="img-wrap">
+			<img src="http://app.nexuslegalassociates.com/dhaval/{{home_img}}">	
+		</div>	
+	</div>
+	<div class="hear-wrap">
+		<h2 ng-hide="latest" class="page-head">Latest Post</h2>
+		<h2 class="page-head">{{Title}}</h2>
+	</div>	
+	<div class="list" ng-repeat="arg in listdata" ng-hide="ListVal">
+		<a class="item item-avatar"   ng-click="fullDesc($index,arg.id)">
+			<img src="http://app.nexuslegalassociates.com/dhaval/{{arg.thumbnail}}">
+			<h2 class="tittle">{{arg.title}}</h2>
+			<p class="name">{{arg.name}}</p>
+			<ion-col center text-center>
+				<ion-note>
+					<p class="dis">{{arg.addat}}</p>
+				</ion-note>
+			</ion-col>
+		</a>
+	</div>
+
+	<div class="card" ng-hide="Error">
+		<div class="item item-text-wrap">
+			Sorry there is no record found !.
+		</div>
+	</div>
+
+</ion-content>

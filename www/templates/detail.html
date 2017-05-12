@@ -1,0 +1,39 @@
+<ion-content padding="true" class="has-header">
+	
+	<div on-swipe-left="left_swipe()" on-swipe-right="right_swipe()">
+
+		<div class="list card">
+
+
+			<div class="item item-avatar">
+				<img src="http://app.nexuslegalassociates.com/dhaval/{{listdata.thumbnail}}">
+				<h2>{{listdata.title}}</h2>
+				<p>{{listdata.addat}}</p>
+			</div>
+			<div class="main-img">
+				<div class="img-wrap">
+					<a  class="subdued share-icon-wrap" ng-click="socialShare()"><i class="icon ion-android-share-alt share-icon"></i></a>
+					<img class="full-image" src="http://app.nexuslegalassociates.com/dhaval/{{listdata.filepath}}">	
+				</div>	
+			</div>
+			<div class="item item-body">			
+				<h2>{{listdata.title}}</h2>
+				<p>
+					{{listdata.discription}}
+				</p>
+			</div>
+
+			<div class="item item-avatar bottom" style="padding-bottom: 35px;margin-bottom:10px; padding-top: 0;">
+				<img src="http://app.nexuslegalassociates.com/dhaval/{{listdata.filepath}}" style="max-width:100px;max-height: initial;position: relative;left:0;-webkit-transform: translateX(0%);
+				-moz-transform: translateX(0%);
+				-ms-transform: translateX(0%);
+				-o-transform: translateX(0%);
+				transform: translateX(0%);">				
+			</div>
+			<p class="bottom-share-icon"><a  class="subdued" ng-click="socialShare()"><i class="icon ion-android-share-alt share-icon"></i></a><!-- <a href="#" class="subdued">5 Comments</a> -->			</p>
+
+		</div> 
+
+	</div>
+</ion-content>
+

@@ -1,0 +1,35 @@
+<ion-content padding="true" class="has-header">
+	<div class="list form-wrap">
+		<label class="item item-input">
+			<input type="text" placeholder="Name" id="name">
+		</label>
+		<label class="item item-input">
+			<input type="number" placeholder="Phone Number" id="phone_num">
+		</label>
+		<label class="item item-input">
+			<input type="email" placeholder="EmailId"  id="email">
+		</label>
+
+		<label class="item item-input" >
+			<select ng-model="category" ng-change="show_category(category)">
+				<option ng-selected="true">Select Category</option>
+				<option ng-repeat="x in cat track by $index" >{{x.list}}</option>
+			</select>
+		</label>
+		<label class="item item-input" ng-hide="sub">
+			<select ng-model="subcategory" id="subcategory">
+				<option ng-selected="true">Select SubCategory</option>
+				<option ng-repeat="x in subcat track by $index">{{x}}</option>					
+			</select>
+		</label>
+		<label class="item item-input">
+			<textarea placeholder="Comments" id="message"></textarea>
+		</label>
+		<button class="button button-block button-positive" ng-click="submit_data()">
+			Submit
+		</button>
+	</div>
+	
+
+	
+</ion-content>
